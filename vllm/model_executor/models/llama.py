@@ -298,14 +298,9 @@ class LlamaForCausalLM(nn.Module):
         "o_proj",
         "gate_up_proj",
         "down_proj",
-        "embed_tokens",
-        "lm_head",
     ]
-    embedding_modules = {
-        "embed_tokens": "input_embeddings",
-        "lm_head": "output_embeddings",
-    }
-    embedding_padding_modules = ["lm_head"]
+    embedding_modules = {}
+    embedding_padding_modules = []
 
     def __init__(
         self,
